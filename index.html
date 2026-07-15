@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MCF-7 Radioresistance | Yuriko Ito</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f5f8fc;
+    }
+
+    header {
+      background: linear-gradient(135deg, #063b8c, #087f8c);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header h1 {
+      max-width: 950px;
+      margin: 0 auto 15px;
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+
+    header p {
+      max-width: 850px;
+      margin: 8px auto;
+      font-size: 1.05rem;
+    }
+
+    nav {
+      background: white;
+      text-align: center;
+      padding: 14px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    nav a {
+      color: #063b8c;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 30px 18px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 24px;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    h2 {
+      color: #063b8c;
+      border-bottom: 3px solid #d9e8fb;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: #087f8c;
+    }
+
+    .highlight {
+      background: #eef7ff;
+      border-left: 5px solid #063b8c;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 18px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin: 25px 0 5px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #063b8c;
+      color: white;
+      text-decoration: none;
+      padding: 13px 20px;
+      margin: 6px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #042b68;
+    }
+
+    .button.secondary {
+      background: #087f8c;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .result-card {
+      text-align: center;
+      border: 1px solid #dce4ed;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fafcff;
+    }
+
+    .result-number {
+      display: block;
+      color: #063b8c;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .references li {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #10233f;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer a {
+      color: #b9e6ff;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>
+    Computational Modeling of Estrogen-Mediated Radioresistance
+    in Three-Dimensional MCF-7 Breast Cancer Spheroids Using PhysiCell
+  </h1>
+
+  <p><strong>Yuriko Ito¹ and Miruna-Maria Furtună²</strong></p>
+
+  <p>
+    ¹ Grigore T. Popa University of Medicine and Pharmacy, Iași, Romania
+  </p>
+
+  <p>
+    ² Advanced Center for Research and Development in Experimental
+    Medicine (CEMEX), Iași, Romania
+  </p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#methods">Methods</a>
+  <a href="#results">Results</a>
+  <a href="#poster">Poster</a>
+  <a href="#references">References</a>
+</nav>
+
+<main>
+
+  <section id="about">
+    <h2>About the Project</h2>
+
+    <p>
+      This project investigates how estrogen may influence tumor growth
+      and radiotherapy response in three-dimensional estrogen receptor-positive
+      MCF-7 breast cancer spheroids.
+    </p>
+
+    <p>
+      A three-dimensional agent-based computational model was developed
+      using the open-source PhysiCell platform. The model incorporates
+      cellular proliferation, apoptosis, oxygen diffusion, hypoxia,
+      estrogen-dependent growth and radiation-induced cell death.
+    </p>
+
+    <div class="highlight">
+      <strong>Main hypothesis:</strong> Estrogen promotes spheroid growth
+      and may reduce radiotherapy effectiveness by increasing the viable
+      tumor-cell population and contributing to hypoxia-mediated protection.
+    </div>
+  </section>
+
+  <section id="methods">
+    <h2>Methods</h2>
+
+    <h3>Computational model</h3>
+
+    <ul>
+      <li>Three-dimensional agent-based simulation using PhysiCell</li>
+      <li>Estrogen receptor-positive MCF-7 breast cancer cells</li>
+      <li>Cell proliferation and apoptosis</li>
+      <li>Oxygen diffusion and development of hypoxia</li>
+      <li>Estrogen-dependent regulation of proliferation</li>
+      <li>Linear-Quadratic model of radiation-induced cell death</li>
+      <li>Oxygen Enhancement Ratio to represent hypoxia-associated radioresistance</li>
+    </ul>
+
+    <h3>Simulated conditions</h3>
+
+    <ol>
+      <li>Control</li>
+      <li>Estrogen treatment</li>
+      <li>Radiation treatment</li>
+      <li>Estrogen plus radiation</li>
+    </ol>
+
+    <p>
+      Tumor growth was simulated for 14 days, with radiation delivered
+      on Day 7.
+    </p>
+  </section>
+
+  <section id="results">
+    <h2>Preliminary Simulation Results</h2>
+
+    <p>
+      Estrogen stimulation accelerated spheroid growth and increased
+      the number of viable cells compared with the untreated control.
+      Following radiation treatment, estrogen-treated spheroids showed
+      a greater surviving cell population and faster post-treatment regrowth.
+    </p>
+
+    <div class="results-grid">
+
+      <div class="result-card">
+        <span class="result-number">1,948</span>
+        Control cells
+      </div>
+
+      <div class="result-card">
+        <span class="result-number">6,274</span>
+        Estrogen-treated cells
+      </div>
+
+      <div class="result-card">
+        <span class="result-number">363</span>
+        Radiation-treated cells
+      </div>
+
+      <div class="result-card">
+        <span class="result-number">1,169</span>
+        Estrogen + radiation cells
+      </div>
+
+    </div>
+
+    <div class="highlight">
+      These preliminary findings suggest that estrogen may contribute
+      to radioresistance through enhanced proliferation and
+      hypoxia-associated protection. Experimental validation is required.
+    </div>
+  </section>
+
+  <section id="poster">
+    <h2>Conference Poster and Project Files</h2>
+
+    <p>
+      The full conference poster, simulation materials and supplementary
+      information are available through this repository.
+    </p>
+
+    <div class="buttons">
+
+      <a class="button"
+         href="Poster2026-Sapporo.pdf"
+         target="_blank">
+        View Poster PDF
+      </a>
+
+      <a class="button secondary"
+         href="https://github.com/yuri070605-hue/MCF7-Radioresistance-PhysiCell"
+         target="_blank">
+        View GitHub Repository
+      </a>
+
+      <a class="button"
+         href="https://physicell.org/"
+         target="_blank">
+        Visit PhysiCell
+      </a>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Limitations</h2>
+
+    <ul>
+      <li>The tumor microenvironment is represented using simplified assumptions.</li>
+      <li>Parameters were derived primarily from published literature.</li>
+      <li>Immune cells, stromal cells, angiogenesis and extracellular matrix remodeling were not included.</li>
+      <li>Intracellular estrogen receptor signaling was simplified.</li>
+      <li>The simulation results require experimental validation using three-dimensional MCF-7 spheroids.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Future Research</h2>
+
+    <ul>
+      <li>Validate the model using laboratory-grown MCF-7 spheroids.</li>
+      <li>Refine biological parameters using experimental measurements.</li>
+      <li>Include detailed estrogen receptor signaling pathways.</li>
+      <li>Model endocrine therapies such as tamoxifen and fulvestrant.</li>
+      <li>Investigate combined endocrine therapy and radiotherapy.</li>
+      <li>Incorporate immune, stromal and extracellular matrix components.</li>
+      <li>Develop patient-specific simulations for personalized treatment research.</li>
+    </ul>
+  </section>
+
+  <section id="references" class="references">
+    <h2>Selected References</h2>
+
+    <ol>
+      <li>
+        Ghaffarizadeh A, Heiland R, Friedman SH, Mumenthaler SM,
+        Macklin P. PhysiCell: an open source physics-based cell simulator
+        for 3-D multicellular systems.
+        <em>PLoS Comput Biol.</em> 2018;14(2):e1005991.
+        <a href="https://doi.org/10.1371/journal.pcbi.1005991"
+           target="_blank">View article</a>
+      </li>
+
+      <li>
+        Hall EJ, Giaccia AJ.
+        <em>Radiobiology for the Radiologist.</em>
+        8th ed. Philadelphia: Wolters Kluwer; 2019.
+      </li>
+
+      <li>
+        Semenza GL. Hypoxia-inducible factors in physiology and medicine.
+        <em>Cell.</em> 2012;148(3):399–408.
+        <a href="https://doi.org/10.1016/j.cell.2012.01.021"
+           target="_blank">View article</a>
+      </li>
+
+      <li>
+        Osborne CK, Schiff R. Mechanisms of endocrine resistance
+        in breast cancer.
+        <em>Annu Rev Med.</em> 2011;62:233–247.
+        <a href="https://doi.org/10.1146/annurev-med-070909-182917"
+           target="_blank">View article</a>
+      </li>
+
+      <li>
+        Weigelt B, Ghajar CM, Bissell MJ. The need for complex
+        three-dimensional culture models to unravel novel pathways
+        and identify accurate biomarkers in breast cancer.
+        <em>Adv Drug Deliv Rev.</em> 2014;69–70:42–51.
+        <a href="https://doi.org/10.1016/j.addr.2014.01.001"
+           target="_blank">View article</a>
+      </li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    © 2026 Yuriko Ito · Computational Oncology Research Project
+  </p>
+
+  <p>
+    Repository:
+    <a href="https://github.com/yuri070605-hue/MCF7-Radioresistance-PhysiCell">
+      MCF7-Radioresistance-PhysiCell
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
