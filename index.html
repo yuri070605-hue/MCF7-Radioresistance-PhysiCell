@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,16 +28,15 @@
     }
 
     header h1 {
-      max-width: 950px;
+      max-width: 1000px;
       margin: 0 auto 15px;
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       line-height: 1.2;
     }
 
     header p {
-      max-width: 850px;
+      max-width: 900px;
       margin: 8px auto;
-      font-size: 1.05rem;
     }
 
     nav {
@@ -45,22 +45,19 @@
       padding: 14px;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     nav a {
       color: #063b8c;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 12px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      margin: 0 10px;
     }
 
     main {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
       padding: 30px 18px;
     }
@@ -70,7 +67,7 @@
       margin-bottom: 24px;
       padding: 28px;
       border-radius: 14px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
     }
 
     h2 {
@@ -91,33 +88,18 @@
       margin-top: 18px;
     }
 
-    .buttons {
-      text-align: center;
-      margin: 25px 0 5px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #063b8c;
-      color: white;
-      text-decoration: none;
-      padding: 13px 20px;
-      margin: 6px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: #042b68;
-    }
-
-    .button.secondary {
-      background: #087f8c;
+    .formula {
+      background: #f8fbff;
+      border: 1px solid #dce7f3;
+      padding: 18px;
+      border-radius: 10px;
+      margin: 16px 0;
+      font-size: 1.05rem;
     }
 
     .results-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 15px;
       margin-top: 20px;
     }
@@ -133,16 +115,59 @@
     .result-number {
       display: block;
       color: #063b8c;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       font-weight: bold;
     }
 
-    li {
-      margin-bottom: 7px;
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
     }
 
-    .references li {
-      margin-bottom: 15px;
+    .button {
+      display: inline-block;
+      background: #063b8c;
+      color: white;
+      text-decoration: none;
+      padding: 13px 20px;
+      margin: 6px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: #087f8c;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+    }
+
+    th, td {
+      border: 1px solid #d9e2ec;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #eef5fb;
+      color: #063b8c;
+    }
+
+    video {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      background: #000;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
     }
 
     footer {
@@ -156,7 +181,7 @@
       color: #b9e6ff;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       header h1 {
         font-size: 1.7rem;
       }
@@ -178,7 +203,7 @@
 <header>
   <h1>
     Computational Modeling of Estrogen-Mediated Radioresistance
-    in Three-Dimensional MCF-7 Breast Cancer Spheroids Using PhysiCell
+    in 3D MCF-7 Breast Cancer Spheroids
   </h1>
 
   <p><strong>Yuriko Ito¹ and Miruna-Maria Furtună²</strong></p>
@@ -188,230 +213,427 @@
   </p>
 
   <p>
-    ² Advanced Center for Research and Development in Experimental
-    Medicine (CEMEX), Iași, Romania
+    ² CEMEX, Grigore T. Popa University of Medicine and Pharmacy, Iași, Romania
   </p>
 </header>
 
 <nav>
   <a href="#about">About</a>
   <a href="#methods">Methods</a>
+  <a href="#groups">Groups</a>
   <a href="#results">Results</a>
+  <a href="#oxygen">Oxygen</a>
+  <a href="#3d">3D</a>
+  <a href="#video">Video</a>
   <a href="#poster">Poster</a>
   <a href="#references">References</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <main>
 
-  <section id="about">
-    <h2>About the Project</h2>
+<section id="about">
+  <h2>About the Project</h2>
 
-    <p>
-      This project investigates how estrogen may influence tumor growth
-      and radiotherapy response in three-dimensional estrogen receptor-positive
-      MCF-7 breast cancer spheroids.
-    </p>
+  <p>
+    This project was motivated by my oncology laboratory internship,
+    where I work with breast cancer cells. I wanted to understand
+    tumor growth and treatment response more visually before performing
+    laboratory experiments.
+  </p>
 
-    <p>
-      A three-dimensional agent-based computational model was developed
-      using the open-source PhysiCell platform. The model incorporates
-      cellular proliferation, apoptosis, oxygen diffusion, hypoxia,
-      estrogen-dependent growth and radiation-induced cell death.
-    </p>
+  <p>
+    Therefore, I developed a proof-of-concept computational model using
+    PhysiCell to simulate MCF-7-like breast cancer cell growth,
+    estrogen stimulation, radiotherapy response, oxygen distribution,
+    and three-dimensional spheroid development.
+  </p>
 
-    <div class="highlight">
-      <strong>Main hypothesis:</strong> Estrogen promotes spheroid growth
-      and may reduce radiotherapy effectiveness by increasing the viable
-      tumor-cell population and contributing to hypoxia-mediated protection.
+  <div class="highlight">
+    <strong>Main aim:</strong>
+    To visualize how estrogen, radiation dose, and the spatial tumor
+    microenvironment may influence MCF-7-like breast cancer growth.
+  </div>
+</section>
+
+<section id="methods">
+  <h2>Methods and Main Formulas</h2>
+
+  <h3>1. Baseline cell-cycle model</h3>
+
+  <p>
+    The control condition used baseline MCF-7-like proliferation with no estrogen
+    stimulation and no irradiation.
+  </p>
+
+  <div class="formula">
+    G0/G1 = 600 min<br>
+    S = 960 min<br>
+    G2 = 480 min<br>
+    M = 120 min<br><br>
+
+    Total nominal cell-cycle duration ≈ 2160 min = 36 h
+  </div>
+
+  <h3>2. Estrogen effect</h3>
+
+  <div class="formula">
+    r<sub>E2</sub> = f<sub>E2</sub> × r<sub>baseline</sub><br><br>
+    f<sub>E2</sub> = 1.25<br>
+    E2 concentration = 1 nM<br>
+    E2 starts on Day 7
+  </div>
+
+  <p>
+    Estrogen was represented as a proliferation multiplier in the current model.
+  </p>
+
+  <h3>3. Radiation response</h3>
+
+  <div class="formula">
+    SF(D) = exp(−αD − βD²)<br><br>
+    α = 0.30 Gy⁻¹<br>
+    β = 0.03 Gy⁻²<br><br>
+    SF(2 Gy) ≈ 0.487<br>
+    SF(4 Gy) ≈ 0.186
+  </div>
+
+  <p>
+    Radiation was delivered as a single 2 Gy or 4 Gy dose on Day 7.
+  </p>
+</section>
+
+<section id="groups">
+  <h2>Simulation Groups</h2>
+
+  <p>
+    All simulations started from the same initial population of 20 cells.
+  </p>
+
+  <table>
+    <tr>
+      <th>Group</th>
+      <th>Estrogen</th>
+      <th>Radiation</th>
+    </tr>
+
+    <tr>
+      <td>Control</td>
+      <td>No</td>
+      <td>0 Gy</td>
+    </tr>
+
+    <tr>
+      <td>2 Gy</td>
+      <td>No</td>
+      <td>2 Gy on Day 7</td>
+    </tr>
+
+    <tr>
+      <td>4 Gy</td>
+      <td>No</td>
+      <td>4 Gy on Day 7</td>
+    </tr>
+
+    <tr>
+      <td>E2 only</td>
+      <td>1 nM from Day 7</td>
+      <td>0 Gy</td>
+    </tr>
+
+    <tr>
+      <td>E2 + 2 Gy</td>
+      <td>1 nM from Day 7</td>
+      <td>2 Gy on Day 7</td>
+    </tr>
+
+    <tr>
+      <td>E2 + 4 Gy</td>
+      <td>1 nM from Day 7</td>
+      <td>4 Gy on Day 7</td>
+    </tr>
+  </table>
+</section>
+
+<section id="results">
+  <h2>Simulation Results</h2>
+
+  <p>
+    Day 12.5 was used as the common comparison point across all six simulations.
+  </p>
+
+  <div class="results-grid">
+
+    <div class="result-card">
+      <span class="result-number">2585</span>
+      E2 only
     </div>
-  </section>
 
-  <section id="methods">
-    <h2>Methods</h2>
-
-    <h3>Computational model</h3>
-
-    <ul>
-      <li>Three-dimensional agent-based simulation using PhysiCell</li>
-      <li>Estrogen receptor-positive MCF-7 breast cancer cells</li>
-      <li>Cell proliferation and apoptosis</li>
-      <li>Oxygen diffusion and development of hypoxia</li>
-      <li>Estrogen-dependent regulation of proliferation</li>
-      <li>Linear-Quadratic model of radiation-induced cell death</li>
-      <li>Oxygen Enhancement Ratio to represent hypoxia-associated radioresistance</li>
-    </ul>
-
-    <h3>Simulated conditions</h3>
-
-    <ol>
-      <li>Control</li>
-      <li>Estrogen treatment</li>
-      <li>Radiation treatment</li>
-      <li>Estrogen plus radiation</li>
-    </ol>
-
-    <p>
-      Tumor growth was simulated for 14 days, with radiation delivered
-      on Day 7.
-    </p>
-  </section>
-
-  <section id="results">
-    <h2>Preliminary Simulation Results</h2>
-
-    <p>
-      Estrogen stimulation accelerated spheroid growth and increased
-      the number of viable cells compared with the untreated control.
-      Following radiation treatment, estrogen-treated spheroids showed
-      a greater surviving cell population and faster post-treatment regrowth.
-    </p>
-
-    <div class="results-grid">
-
-      <div class="result-card">
-        <span class="result-number">1,948</span>
-        Control cells
-      </div>
-
-      <div class="result-card">
-        <span class="result-number">6,274</span>
-        Estrogen-treated cells
-      </div>
-
-      <div class="result-card">
-        <span class="result-number">363</span>
-        Radiation-treated cells
-      </div>
-
-      <div class="result-card">
-        <span class="result-number">1,169</span>
-        Estrogen + radiation cells
-      </div>
-
+    <div class="result-card">
+      <span class="result-number">2109</span>
+      Control
     </div>
 
-    <div class="highlight">
-      These preliminary findings suggest that estrogen may contribute
-      to radioresistance through enhanced proliferation and
-      hypoxia-associated protection. Experimental validation is required.
+    <div class="result-card">
+      <span class="result-number">1193</span>
+      E2 + 2 Gy
     </div>
-  </section>
 
-  <section id="poster">
-    <h2>Conference Poster and Project Files</h2>
-
-    <p>
-      The full conference poster, simulation materials and supplementary
-      information are available through this repository.
-    </p>
-
-    <div class="buttons">
-
-      <a class="button"
-         href="Poster2026-Sapporo.pdf"
-         target="_blank">
-        View Poster PDF
-      </a>
-
-      <a class="button secondary"
-         href="https://github.com/yuri070605-hue/MCF7-Radioresistance-PhysiCell"
-         target="_blank">
-        View GitHub Repository
-      </a>
-
-      <a class="button"
-         href="https://physicell.org/"
-         target="_blank">
-        Visit PhysiCell
-      </a>
-
+    <div class="result-card">
+      <span class="result-number">1113</span>
+      2 Gy
     </div>
-  </section>
 
-  <section>
-    <h2>Limitations</h2>
+    <div class="result-card">
+      <span class="result-number">457</span>
+      4 Gy
+    </div>
 
-    <ul>
-      <li>The tumor microenvironment is represented using simplified assumptions.</li>
-      <li>Parameters were derived primarily from published literature.</li>
-      <li>Immune cells, stromal cells, angiogenesis and extracellular matrix remodeling were not included.</li>
-      <li>Intracellular estrogen receptor signaling was simplified.</li>
-      <li>The simulation results require experimental validation using three-dimensional MCF-7 spheroids.</li>
-    </ul>
-  </section>
+    <div class="result-card">
+      <span class="result-number">436</span>
+      E2 + 4 Gy
+    </div>
 
-  <section>
-    <h2>Future Research</h2>
+  </div>
 
-    <ul>
-      <li>Validate the model using laboratory-grown MCF-7 spheroids.</li>
-      <li>Refine biological parameters using experimental measurements.</li>
-      <li>Include detailed estrogen receptor signaling pathways.</li>
-      <li>Model endocrine therapies such as tamoxifen and fulvestrant.</li>
-      <li>Investigate combined endocrine therapy and radiotherapy.</li>
-      <li>Incorporate immune, stromal and extracellular matrix components.</li>
-      <li>Develop patient-specific simulations for personalized treatment research.</li>
-    </ul>
-  </section>
+  <div class="highlight">
+    Estrogen-only produced the highest modeled cell population.
+    Increasing radiation dose from 2 Gy to 4 Gy produced stronger
+    suppression of simulated growth. Surviving irradiated populations
+    subsequently showed regrowth.
+  </div>
+</section>
 
-  <section id="references" class="references">
-    <h2>Selected References</h2>
+<section id="oxygen">
+  <h2>Oxygen / Hypoxia Visualization</h2>
 
-    <ol>
-      <li>
-        Ghaffarizadeh A, Heiland R, Friedman SH, Mumenthaler SM,
-        Macklin P. PhysiCell: an open source physics-based cell simulator
-        for 3-D multicellular systems.
-        <em>PLoS Comput Biol.</em> 2018;14(2):e1005991.
-        <a href="https://doi.org/10.1371/journal.pcbi.1005991"
-           target="_blank">View article</a>
-      </li>
+  <p>
+    Oxygen transport was represented using a diffusion-decay-consumption framework:
+  </p>
 
-      <li>
-        Hall EJ, Giaccia AJ.
-        <em>Radiobiology for the Radiologist.</em>
-        8th ed. Philadelphia: Wolters Kluwer; 2019.
-      </li>
+  <div class="formula">
+    ∂C/∂t = D<sub>O₂</sub>∇²C − λC − U
+  </div>
 
-      <li>
-        Semenza GL. Hypoxia-inducible factors in physiology and medicine.
-        <em>Cell.</em> 2012;148(3):399–408.
-        <a href="https://doi.org/10.1016/j.cell.2012.01.021"
-           target="_blank">View article</a>
-      </li>
+  <p>
+    where C represents local oxygen concentration,
+    D<sub>O₂</sub> represents oxygen diffusion,
+    λ represents decay,
+    and U represents cellular oxygen consumption.
+  </p>
 
-      <li>
-        Osborne CK, Schiff R. Mechanisms of endocrine resistance
-        in breast cancer.
-        <em>Annu Rev Med.</em> 2011;62:233–247.
-        <a href="https://doi.org/10.1146/annurev-med-070909-182917"
-           target="_blank">View article</a>
-      </li>
+  <p>
+    Each cell was colored according to its local simulated oxygen concentration.
+  </p>
 
-      <li>
-        Weigelt B, Ghajar CM, Bissell MJ. The need for complex
-        three-dimensional culture models to unravel novel pathways
-        and identify accurate biomarkers in breast cancer.
-        <em>Adv Drug Deliv Rev.</em> 2014;69–70:42–51.
-        <a href="https://doi.org/10.1016/j.addr.2014.01.001"
-           target="_blank">View article</a>
-      </li>
-    </ol>
-  </section>
+  <table>
+    <tr>
+      <th>Oxygen level</th>
+      <th>Visualization color</th>
+    </tr>
+
+    <tr><td>≥35 mmHg</td><td>Red</td></tr>
+    <tr><td>30–35 mmHg</td><td>Orange</td></tr>
+    <tr><td>20–30 mmHg</td><td>Yellow</td></tr>
+    <tr><td>10–20 mmHg</td><td>Green</td></tr>
+    <tr><td>5–10 mmHg</td><td>Blue</td></tr>
+    <tr><td>&lt;5 mmHg</td><td>Purple</td></tr>
+  </table>
+
+  <div class="highlight">
+    These oxygen ranges are visualization bins and are not experimentally
+    validated MCF-7 hypoxia thresholds.
+  </div>
+
+  <p>
+    In the current model, oxygen is used mainly for spatial visualization.
+    Oxygen-dependent radiosensitivity / OER is planned as a future extension.
+  </p>
+</section>
+
+<section id="3d">
+  <h2>3D Spheroid and Cutaway Visualization</h2>
+
+  <p>
+    Each simulated cell was assigned independent x, y, and z coordinates:
+  </p>
+
+  <div class="formula">
+    x<sub>i</sub> = (x<sub>i</sub>, y<sub>i</sub>, z<sub>i</sub>)
+  </div>
+
+  <p>
+    The simulation was extended from 2D into true 3D to better represent
+    the spatial organization of a tumor spheroid.
+  </p>
+
+  <p>
+    Because outer cells hide the spheroid interior, a half-cut visualization
+    was created by displaying only cells on one side of the plane:
+  </p>
+
+  <div class="formula">
+    x<sub>i</sub> ≤ 0
+  </div>
+
+  <p>
+    Hidden cells are removed only from the rendering.
+    They remain present in the underlying simulation.
+  </p>
+</section>
+
+<section id="video">
+  <h2>Simulation Video</h2>
+
+  <p>
+    Add your final PhysiCell simulation video to the repository,
+    then replace the filename below with the exact uploaded MP4 filename.
+  </p>
+
+  <video controls>
+    <source src="simulation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <p style="text-align:center;">
+    Day 0 → Day 14 MCF-7-like spheroid simulation
+  </p>
+</section>
+
+<section id="poster">
+  <h2>Poster and Project Files</h2>
+
+  <p>
+    Conference poster, simulation material, and supplementary information
+    can be accessed below.
+  </p>
+
+  <div class="buttons">
+
+    <a class="button"
+       href="Yuriko_Ito_Eposter_A0.pdf"
+       target="_blank">
+       View E-Poster
+    </a>
+
+    <a class="button secondary"
+       href="https://github.com/yuri070605-hue/MCF7-Radioresistance-PhysiCell"
+       target="_blank">
+       GitHub Repository
+    </a>
+
+    <a class="button"
+       href="https://physicell.org/"
+       target="_blank">
+       PhysiCell
+    </a>
+
+  </div>
+</section>
+
+<section>
+  <h2>Discussion</h2>
+
+  <p>
+    The model showed that 4 Gy suppressed cell growth more strongly than
+    2 Gy, while estrogen increased modeled proliferation.
+    Surviving cells were able to regrow after irradiation.
+  </p>
+
+  <p>
+    The 3D oxygen visualization also showed spatial differences inside
+    the spheroid. However, oxygen is currently used mainly for visualization
+    and is not yet directly linked to radiation sensitivity.
+  </p>
+
+  <p>
+    Overall, this is a proof-of-concept computational model.
+    Future work will include repeated simulations, parameter testing,
+    and comparison with experimental MCF-7 spheroid data.
+  </p>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+
+  <ul>
+    <li>Repeat simulations using multiple random seeds</li>
+    <li>Compare simulation outputs with laboratory-grown MCF-7 spheroids</li>
+    <li>Perform parameter sensitivity analysis</li>
+    <li>Implement oxygen-dependent radiosensitivity / OER</li>
+    <li>Investigate endocrine therapy and radiotherapy sequencing</li>
+  </ul>
+</section>
+
+<section id="references">
+  <h2>Selected References</h2>
+
+  <ol>
+    <li>
+      Ghaffarizadeh A, Heiland R, Friedman SH, Mumenthaler SM, Macklin P.
+      PhysiCell: an open source physics-based cell simulator for 3-D multicellular systems.
+      <em>PLoS Comput Biol.</em> 2018;14(2):e1005991.
+    </li>
+
+    <li>
+      Hall EJ, Giaccia AJ.
+      <em>Radiobiology for the Radiologist.</em>
+    </li>
+
+    <li>
+      Friedrich J, Seidel C, Ebner R, Kunz-Schughart LA.
+      Spheroid-based drug screen: considerations and practical approach.
+      <em>Nature Protocols.</em> 2009.
+    </li>
+
+    <li>
+      Osborne CK, Schiff R.
+      Mechanisms of endocrine resistance in breast cancer.
+      <em>Annual Review of Medicine.</em> 2011.
+    </li>
+
+    <li>
+      Gray LH, Conger AD, Ebert M, Hornsey S, Scott OCA.
+      The concentration of oxygen dissolved in tissues at the time of irradiation
+      as a factor in radiotherapy.
+      <em>British Journal of Radiology.</em> 1953.
+    </li>
+  </ol>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p>
+    <strong>Yuriko Ito</strong><br>
+    Grigore T. Popa University of Medicine and Pharmacy, Iași, Romania
+  </p>
+
+  <p>
+    Email:
+    <a href="mailto:yuri070605@gmail.com">
+      yuri070605@gmail.com
+    </a>
+  </p>
+
+  <p>
+    For more details, please visit my poster session or explore the
+    simulation files through this website.
+  </p>
+</section>
 
 </main>
 
 <footer>
+
   <p>
     © 2026 Yuriko Ito · Computational Oncology Research Project
   </p>
 
   <p>
-    Repository:
-    <a href="https://github.com/yuri070605-hue/MCF7-Radioresistance-PhysiCell">
-      MCF7-Radioresistance-PhysiCell
-    </a>
+    MCF-7 Radioresistance PhysiCell Project
   </p>
+
 </footer>
 
 </body>
